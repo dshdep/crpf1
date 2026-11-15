@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keshav Chandra Mazumdar | Military Intelligence &amp; Warfare Doctrine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #070708;
+            --bg-secondary: #0e0e11;
+            --bg-card: #121216;
+            --gold-light: #f3d78b;
+            --gold-primary: #d4af37;
+            --gold-dark: #997a1d;
+            --gold-border: rgba(212, 175, 55, 0.28);
+            --text-primary: #f5f2eb;
+            --text-secondary: #b8b2a6;
+            --text-muted: #827c70;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.75;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 55%),
+                linear-gradient(to bottom, #070708, #0b0b0d);
+            min-height: 100vh;
+        }
+
+        /* Top Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 7, 8, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gold-border);
+            padding: 0.9rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-brand {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.14em;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero Section */
+        header.hero {
+            text-align: center;
+            padding: 4.5rem 1.5rem 3.5rem;
+            border-bottom: 1px solid var(--gold-border);
+        }
+
+        .emblem-wrapper {
+            width: 150px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.25));
+        }
+
+        .classification-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold-primary);
+            border: 1px solid var(--gold-border);
+            background: rgba(212, 175, 55, 0.06);
+            padding: 0.35rem 1.1rem;
+            border-radius: 2px;
+            margin-bottom: 1.25rem;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.1rem, 5vw, 3.4rem);
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 400;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        /* Top Featured Governor Statement Banner */
+        .governor-banner {
+            margin: 3rem auto 1rem;
+            background: linear-gradient(145deg, #14130f 0%, #0c0c0e 100%);
+            border: 1px solid var(--gold-primary);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), inset 0 0 25px rgba(212, 175, 55, 0.06);
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .governor-banner::before,
+        .governor-banner::after {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-color: var(--gold-light);
+            border-style: solid;
+        }
+
+        .governor-banner::before {
+            top: -1px;
+            left: -1px;
+            border-width: 2px 0 0 2px;
+        }
+
+        .governor-banner::after {
+            bottom: -1px;
+            right: -1px;
+            border-width: 0 2px 2px 0;
+        }
+
+        .banner-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid var(--gold-border);
+            padding-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .banner-header-left h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-light);
+            font-size: 1.35rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.25rem;
+        }
+
+        .banner-header-left p {
+            color: var(--gold-primary);
+            font-size: 0.88rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        .banner-ref {
+            text-align: right;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            font-family: 'Cinzel', serif;
+        }
+
+        .governor-quote {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.32rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+            padding-left: 1.25rem;
+            border-left: 3px solid var(--gold-primary);
+        }
+
+        .governor-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .governor-details strong {
+            color: var(--gold-light);
+            display: block;
+            margin-bottom: 0.2rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* Sections */
+        section {
+            padding: 3.5rem 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        .section-num {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        h2.section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.75rem;
+            color: var(--gold-light);
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1.15rem;
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .gold-text {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+
+        /* Grid Cards */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--gold-border);
+            padding: 1.75rem;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .card:hover {
+            border-color: var(--gold-primary);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.85rem;
+            letter-spacing: 0.04em;
+        }
+
+        /* Image Display Integration */
+        .doc-showcase {
+            margin: 2rem 0;
+            background: var(--bg-card);
+            border: 1px solid var(--gold-border);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .doc-showcase img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .doc-caption {
+            margin-top: 0.85rem;
+            font-size: 0.88rem;
+            color: var(--gold-light);
+            font-family: 'Cinzel', serif;
+            letter-spacing: 0.05em;
+        }
+
+        .flex-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .gallery-item {
+            flex: 1;
+            min-width: 280px;
+            max-width: 480px;
+            background: var(--bg-card);
+            border: 1px solid var(--gold-border);
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            max-height: 380px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* Badges */
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .badge {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid var(--gold-border);
+            color: var(--gold-light);
+            padding: 0.5rem 0.95rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.03em;
+        }
+
+        /* Lists */
+        ul.styled-list, ol.styled-list {
+            margin-left: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        ul.styled-list li, ol.styled-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 0.35rem;
+        }
+
+        ul.styled-list li::marker, ol.styled-list li::marker {
+            color: var(--gold-primary);
+            font-weight: 600;
+        }
+
+        /* Philosophy Quote Box */
+        .motto-box {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(18, 18, 22, 0.9) 100%);
+            border-left: 4px solid var(--gold-primary);
+            padding: 2rem;
+            margin: 1.75rem 0;
+        }
+
+        .motto-box blockquote {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.55rem;
+            font-style: italic;
+            color: var(--gold-light);
+            line-height: 1.5;
+        }
+
+        /* Official Record Box */
+        .record-box {
+            background: #0d0d10;
+            border: 1px solid var(--gold-border);
+            padding: 2rem;
+            margin-top: 1.25rem;
+        }
+
+        .record-meta {
+            font-size: 0.85rem;
+            color: var(--gold-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #050506;
+            border-top: 1px solid var(--gold-border);
+            padding: 3rem 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .footer-title {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+            letter-spacing: 0.12em;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-sub {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0.35rem;
+        }
+
+        @media (max-width: 768px) {
+            .banner-ref {
+                text-align: left;
+            }
+            .governor-banner {
+                padding: 1.5rem;
+            }
+            nav {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#top" class="nav-brand">KESHAV CHANDRA MAZUMDAR</a>
+            <div class="nav-links">
+                <a href="#commendation">Governor's Commendation</a>
+                <a href="#profile">প্রোফাইল</a>
+                <a href="#doctrine">যুদ্ধের মতবাদ</a>
+                <a href="#credentials">শংসাপত্র</a>
+                <a href="#records">অফিসিয়াল রেকর্ড</a>
+                <a href="#heritage">উত্তরাধিকার</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="top">
+        <!-- Hero Header with Crossed Rifles & Olive Branches Emblem -->
+        <header class="hero">
+            <div class="emblem-wrapper" aria-label="Tactical Emblem: Crossed Rifles with Olive Branches">
+                <svg viewBox="0 0 240 180" width="160" height="125" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#f7e29c"/>
+                            <stop offset="50%" stop-color="#d4af37"/>
+                            <stop offset="100%" stop-color="#8e6f18"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Left Olive Branch -->
+                    <g fill="none" stroke="url(#goldGrad)" stroke-width="2.2" stroke-linecap="round">
+                        <path d="M 110 154 C 65 148, 35 112, 42 58" />
+                        <path d="M 88 148 C 76 154, 68 148, 74 140 C 80 135, 86 142, 88 148 Z" fill="url(#goldGrad)"/>
+                        <path d="M 70 136 C 56 140, 48 131, 56 123 C 63 118, 69 128, 70 136 Z" fill="url(#goldGrad)"/>
+                        <path d="M 55 118 C 40 118, 34 107, 44 100 C 52 96, 56 108, 55 118 Z" fill="url(#goldGrad)"/>
+                        <path d="M 45 96 C 31 92, 28 80, 39 75 C 47 72, 48 86, 45 96 Z" fill="url(#goldGrad)"/>
+                        <path d="M 42 74 C 31 66, 32 54, 43 52 C 50 52, 47 65, 42 74 Z" fill="url(#goldGrad)"/>
+                        <path d="M 84 144 C 86 132, 95 128, 97 137 C 98 144, 90 146, 84 144 Z" fill="url(#goldGrad)"/>
+                        <path d="M 67 130 C 71 118, 81 116, 81 125 C 81 132, 73 133, 67 130 Z" fill="url(#goldGrad)"/>
+                        <path d="M 53 111 C 59 100, 69 100, 68 109 C 66 115, 58 115, 53 111 Z" fill="url(#goldGrad)"/>
+                        <path d="M 45 89 C 53 80, 63 82, 60 90 C 57 96, 49 94, 45 89 Z" fill="url(#goldGrad)"/>
+                    </g>
+
+                    <!-- Right Olive Branch -->
+                    <g fill="none" stroke="url(#goldGrad)" stroke-width="2.2" stroke-linecap="round">
+                        <path d="M 130 154 C 175 148, 205 112, 198 58" />
+                        <path d="M 152 148 C 164 154, 172 148, 166 140 C 160 135, 154 142, 152 148 Z" fill="url(#goldGrad)"/>
+                        <path d="M 170 136 C 184 140, 192 131, 184 123 C 177 118, 171 128, 170 136 Z" fill="url(#goldGrad)"/>
+                        <path d="M 185 118 C 200 118, 206 107, 196 100 C 188 96, 184 108, 185 118 Z" fill="url(#goldGrad)"/>
+                        <path d="M 195 96 C 209 92, 212 80, 201 75 C 193 72, 192 86, 195 96 Z" fill="url(#goldGrad)"/>
+                        <path d="M 198 74 C 209 66, 208 54, 197 52 C 190 52, 193 65, 198 74 Z" fill="url(#goldGrad)"/>
+                        <path d="M 156 144 C 154 132, 145 128, 143 137 C 142 144, 150 146, 156 144 Z" fill="url(#goldGrad)"/>
+                        <path d="M 173 130 C 169 118, 159 116, 159 125 C 159 132, 167 133, 173 130 Z" fill="url(#goldGrad)"/>
+                        <path d="M 187 111 C 181 100, 171 100, 172 109 C 174 115, 182 115, 187 111 Z" fill="url(#goldGrad)"/>
+                        <path d="M 195 89 C 187 80, 177 82, 180 90 C 183 96, 191 94, 195 89 Z" fill="url(#goldGrad)"/>
+                    </g>
+
+                    <!-- Crossed Rifles -->
+                    <g transform="translate(120, 92) rotate(-38)" fill="url(#goldGrad)">
+                        <path d="M -82 -4 L -56 -3 L -54 5 L -84 9 L -86 -1 Z" />
+                        <rect x="-56" y="-4" width="44" height="7" rx="1" />
+                        <path d="M -48 3 L -53 12 L -46 13 L -42 3 Z" />
+                        <path d="M -30 3 L -27 14 L -20 13 L -23 3 Z" />
+                        <rect x="-12" y="-3.5" width="46" height="5.5" rx="1" />
+                        <rect x="34" y="-2" width="46" height="2.6" />
+                        <polygon points="70,-2 73,-7 75,-2" />
+                        <rect x="78" y="-3" width="5" height="4.5" />
+                    </g>
+                    <g transform="translate(120, 92) scale(-1, 1) rotate(-38)" fill="url(#goldGrad)">
+                        <path d="M -82 -4 L -56 -3 L -54 5 L -84 9 L -86 -1 Z" />
+                        <rect x="-56" y="-4" width="44" height="7" rx="1" />
+                        <path d="M -48 3 L -53 12 L -46 13 L -42 3 Z" />
+                        <path d="M -30 3 L -27 14 L -20 13 L -23 3 Z" />
+                        <rect x="-12" y="-3.5" width="46" height="5.5" rx="1" />
+                        <rect x="34" y="-2" width="46" height="2.6" />
+                        <polygon points="70,-2 73,-7 75,-2" />
+                        <rect x="78" y="-3" width="5" height="4.5" />
+                    </g>
+                    <polygon points="120,24 123,33 132,33 125,38 128,47 120,41 112,47 115,38 108,33 117,33" fill="url(#goldGrad)"/>
+                </svg>
+            </div>
+
+            <div class="classification-tag">Combat Forces Education &amp; Tactical Intelligence</div>
+            <h1>KESHAV CHANDRA MAZUMDAR</h1>
+            <p class="subtitle">Military Intelligence Instructor &bull; Warfare Designer &bull; Counter-Terrorism Strategist &bull; Author</p>
+        </header>
+
+        <!-- Top Featured Section: Official Statement by Governor General V. K. Singh (Kept intact in English) -->
+        <section id="commendation" style="border-bottom: none; padding-bottom: 1rem;">
+            <div class="governor-banner">
+                <div class="banner-header">
+                    <div class="banner-header-left">
+                        <h2>OFFICIAL COMMENDATION &amp; ENDORSEMENT</h2>
+                        <p>Issued by General (Dr) Vijay Kumar Singh, PVSM, AVSM, YSM (Retd.) — Governor of Mizoram &amp; Former Chief of the Army Staff</p>
+                    </div>
+                    <div class="banner-ref">
+                        <div>RAJ BHAVAN, AIZAWL, MIZORAM</div>
+                        <div>Ref: Virtual Staff Officer &amp; Project Army XXII</div>
+                    </div>
+                </div>
+
+                <blockquote class="governor-quote">
+                    &ldquo;I would like to place on record the pathbreaking work done by Shri Keshav Chandra Mazumdar. He has single handedly given the Armed Forces of India a Battle Advisory System on Intelligence appreciation in the form of a &lsquo;Virtual Intelligence Staff Officer&rsquo; to the Commander... I am convinced that this will enhance the efficacy of operations of the Armed Forces, will remove uncertainties and minimise casualties. It will ensure the optimum utilisation of Intelligence as a winning tool to enhance success in entire spectrum of conflict cycle.&rdquo;
+                </blockquote>
+
+                <p>
+                    In an official record issued from Raj Bhavan, Aizawl (dated 23/09/2025), His Excellency <span class="gold-text">General (Dr) V. K. Singh</span>—26th Chief of the Army Staff of the Indian Army and Governor of Mizoram—noted that the <span class="highlight">Virtual Staff Officer</span> (titled <span class="gold-text">&lsquo;Warlens Fury&rsquo;</span>, portraying intelligence as active combat) passed all functionality tests. The citation highlights its capability to advise commanders across LWE zones, hybrid warfare, and NATO-defined cognitive warfare.
+                </p>
+            </div>
+        </section>
+
+        <!-- 01 / Executive Profile & Integrated Image Gallery -->
+        <section id="profile">
+            <span class="section-num">০১ / নির্বাহী প্রোফাইল এবং মাঠপর্যায়ের অপারেশন</span>
+            <h2 class="section-title">সামরিক গোয়েন্দা ও ক্ষেত্রভিত্তিক মোতায়েন</h2>
+            <p>
+                প্রায় <span class="gold-text">২৮ বছরেরও বেশি গ্লোবাল অপারেশনাল এবং শিক্ষণীয় অভিজ্ঞতার</span> অধিকারী কেশব চন্দ্র মজুমদার অপ্রতিসম যুদ্ধ (Asymmetric Warfare), মানব বুদ্ধিমত্তা (HUMINT), প্রতি-গোয়েন্দা (Counter-intelligence) এবং বিশেষ অভিযানে বিশেষজ্ঞ। একজন অগ্রগামী বহিরাগত কৌশলগত প্রশিক্ষক হিসেবে তিনি অভিজাত বিশেষ বাহিনীগুলোকে প্রশিক্ষণ দিয়েছেন এবং মাঠপর্যায়ে সরাসরি অপারেশন পরিচালনা করেছেন।
+            </p>
+
+            <!-- Gallery using exact requested image filenames -->
+            <div class="flex-gallery">
+                <div class="gallery-item">
+                    <img src="cert-photo.jpg" alt="ATO Credential and Field Operator Record">
+                    <div class="doc-caption">ATO শংসাপত্র ও ফিল্ড অপারেটিভ ট্রেনিং</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="team-photo.jpg" alt="Combat Security Element &amp; Protection Team">
+                    <div class="doc-caption">কম্ব্যাট সিকিউরিটি এলিমেন্ট ও প্রোটেকশন টাস্ক ফোর্সের ছবি</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 / Warfare Doctrine & Systems -->
+        <section id="doctrine">
+            <span class="section-num">০২ / যুদ্ধকৌশল মতবাদ ও সিস্টেম</span>
+            <h2 class="section-title">সক্রিয় যুদ্ধ ব্যবস্থা হিসেবে গোয়েন্দাগিরি</h2>
+            <p>
+                প্রথাগত সামরিক মতবাদকে চ্যালেঞ্জ করে কেশব প্রমাণ করেছেন যে <span class="gold-text">সামরিক গোয়েন্দাগিরি হলো যুদ্ধের একটি সক্রিয় ব্যবস্থা</span>—যা ডেডিকেটেড আক্রমণাত্মক কৌশল, বল-সুরক্ষা প্রোটোকল এবং যুদ্ধক্ষেত্রের দ্রুত সিদ্ধান্ত গ্রহণের পরিকাঠামো দ্বারা সুসজ্জিত।
+            </p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>প্রজেক্ট আর্মি XXII এবং অর্গানিক নোড</h3>
+                    <p>যুদ্ধ ব্যাটালিয়নগুলোর ঠিক ভেতরে বহুবিষয়ক গোয়েন্দা উপ-ইউনিটগুলোকে যুক্ত করার জন্য ২০১৮ সালে এটি কল্পনা করা হয়েছিল। ২০২১ সালের মে মাসে ছত্তিশগড়ের বিজাপুরে সিআরপিএফ-এর জন্য একটি কৌশলগত গোয়েন্দা অপারেশন নোড হিসেবে সফলভাবে মোতায়েন করা হয়েছিল।</p>
+                </div>
+                <div class="card">
+                    <h3>ভার্চুয়াল ইন্টেলিজেন্স স্টাফ অফিসার</h3>
+                    <p>একটি উন্নত যুদ্ধ উপদেষ্টা সিস্টেম (&lsquo;Warlens Fury&rsquo;) যা জটিল যুদ্ধক্ষেত্রের ইনপুটগুলোকে একত্রিত করতে এবং সামরিক অভিযানের সময় কমান্ডারদের রিয়েল-টাইম গোয়েন্দা মূল্যায়ন প্রদান করতে প্রকৌশলী করা হয়েছে।</p>
+                </div>
+                <div class="card">
+                    <h3>মতবাদগত সংগ্রহ এবং বৈশ্বিক প্রভাব</h3>
+                    <p>তিনি <span class="gold-text">২৬ থেকে ৩২টি সামরিক ফিল্ড ম্যানুয়াল</span> এবং <span class="gold-text">১৪৫,০০০+ পৃষ্ঠারও বেশি</span> কৌশলগত গবেষণার রচয়িতা। মিত্র সামরিক কমান্ডগুলোর পক্ষ থেকে জীবন বাঁচানোর স্বীকৃতিস্বরূপ আনুষ্ঠানিক পত্র রয়েছে।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 / Credentials & International Leadership -->
+        <section id="credentials">
+            <span class="section-num">০৩ / শংসাপত্র ও শাসনব্যবস্থা</span>
+            <h2 class="section-title">একাডেমিক যোগ্যতা ও আন্তর্জাতিক বোর্ড</h2>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>একাডেমিক ডিগ্রি এবং ফেলোশিপ</h3>
+                    <ul class="styled-list">
+                        <li><span class="highlight">ফেলো:</span> নিউ ওয়েস্টমিনস্টার কলেজ, ব্রিটিশ কলাম্বিয়া, কানাডা (জুলাই ২০১২)।</li>
+                        <li><span class="highlight">অ্যাসোসিয়েট ডিগ্রি:</span> মিলিটারি সায়েন্স (সামরিক বিজ্ঞান)।</li>
+                        <li><span class="highlight">ডিপ্লোমা:</span> ক্রিমিনোলজি (স্টোনব্রিজ অ্যাসোসিয়েটেড কলেজ, ইউকে) এবং ক্রিমিনাল প্রোফাইলিং (ভারত)।</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>বৈশ্বিক প্রতিরক্ষা নিয়োগ</h3>
+                    <ul class="styled-list">
+                        <li><span class="highlight">ATAB:</span> অ্যান্টি-টেররিজম অ্যাক্রেডিটেশন বোর্ড, ইউএসএ-এর সাবেক সিনিয়র ভাইস প্রেসিডেন্ট।</li>
+                        <li><span class="highlight">পরামর্শদাতা:</span> RIEAS (গ্রীস) এবং ইউরোপিয়ান ইন্টেলিজেন্স একাডেমির উপদেষ্টা।</li>
+                        <li><span class="highlight">স্বীকৃতি:</span> গ্রীসের ঊর্ধ্বতন ফ্ল্যাগ অফিসারদের দ্বারা সম্মানিত, যিনি <span class="highlight">&lsquo;কিং আলেকজান্ডারের আত্মা&rsquo;</span> ধারণ করেন।</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 / Official Clarification & Police Final Report with Image -->
+        <section id="records">
+            <span class="section-num">০৪ / অফিসিয়াল যাচাইকরণ</span>
+            <h2 class="section-title">অফিসিয়াল স্পষ্টীকরণ ও পুলিশ চূড়ান্ত প্রতিবেদন</h2>
+            <p>
+                কলকাতার সল্টলেকের বিধাননগরে সিআরপিএফ সুবিধার একটি মিথস্ক্রিয়া সম্পর্কিত ঐতিহাসিক ওয়েব এন্ট্রিগুলো সম্পর্কে: অফিসিয়াল বিচারিক রেকর্ডগুলো প্রতিষ্ঠা করে যে সমস্ত অভিযোগ সম্পূর্ণ ভিত্তিহীন ছিল এবং আনুষ্ঠানিকভাবে একটি <span class="gold-text">&lsquo;ভুল তথ্য&rsquo; (Mistake of Fact)</span> হিসেবে বন্ধ করা হয়েছিল।
+            </p>
+
+            <!-- Display Police Report using exact requested image filename -->
+            <div class="doc-showcase">
+                <img src="police-report.jpg" alt="Official Police Final Report Document">
+                <div class="doc-caption">অফিসিয়াল পুলিশ ফাইনাল রিপোর্ট (FRMF No. 06/19, Dt. 31.01.2019) — সম্পূর্ণ অব্যাহতি</div>
+            </div>
+
+            <div class="record-box">
+                <div class="record-meta">পুলিশের চূড়ান্ত প্রতিবেদনের সারসংক্ষেপ</div>
+                <ol class="styled-list">
+                    <li>সিআরপিএফ ক্যাম্পে কোনো অনধিকার প্রবেশ ঘটেনি; সেন্ট্রি কর্মীরা সরাসরি আইজিপি অফিসে পরিদর্শকদের নিয়ে গিয়েছিলেন।</li>
+                    <li>উপস্থাপিত সমস্ত পরিচয়পত্র সম্পূর্ণরূপে খাঁটি হিসেবে যাচাই করা হয়েছিল, যা শ্রী মজুমদারকে একজন সন্ত্রাসবিরোধী অফিসার হিসেবে স্বীকৃতি দেয়।</li>
+                    <li>নিরাপত্তা বাহিনীর জন্য যুদ্ধ কৌশল অধ্যয়নের একটি প্রকল্প নিয়ে আলোচনার জন্যই এই পরিদর্শন করা হয়েছিল।</li>
+                    <li>তদন্তকারী কর্মকর্তা নিশ্চিত করেছেন যে কোনো অপরাধ সংঘটিত হয়নি, সম্পূর্ণ প্রাতিষ্ঠানিক ছাড়পত্র দিয়ে মামলাটি বন্ধ করা হয়েছে।</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 05 / Heritage & Philosophy -->
+        <section id="heritage">
+            <span class="section-num">০৫ / ঐতিহ্য ও জীবনদর্শন</span>
+            <h2 class="section-title">পারিবারিক ঐতিহ্য ও অপারেশনাল দর্শন</h2>
+            <p>
+                সর্বোচ্চ সততার যুদ্ধ-স্নাতক ভারতীয় সেনা কর্মকর্তা প্রয়াত <span class="highlight">ক্যাপ্টেন ডি. এন. মজুমদার</span>-এর সুযোগ্য পুত্র, কেশব চন্দ্র মজুমদার জাতীয় নিরাপত্তা এবং সৈনিকদের সুরক্ষার জন্য আজীবন উৎসর্গীকৃত।
+            </p>
+
+            <div class="motto-box">
+                <blockquote>
+                    &ldquo;যদি জ্ঞান একটি সেনার জীবন বাঁচাতে পারে, তবে সেই জ্ঞান অবশ্যই বিকাশ করতে হবে, ভাগ করে নিতে হবে এবং ব্যবহার করতে হবে।&rdquo;
+                </blockquote>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-title">KESHAV CHANDRA MAZUMDAR</div>
+        <div class="footer-sub">Combat Forces Education and Training (CFET) &bull; Kolkata, India</div>
+        <div class="footer-sub">&copy; 2026 Keshav Chandra Mazumdar. All Rights Reserved.</div>
+    </footer>
+
+</body>
+</html>
